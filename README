@@ -2,7 +2,7 @@
                                        JUNCOMMENT 1.0
 ---------------------------------------------------------------------------------------
 
-  Esta aplicación borra los comentarios simples y multilinea tipo Java como // y /**/,
+  Esta aplicación borra los comentarios simples y multilinea tipo  C   como // y /**/,
   y los comentarios tipo xml  como   <!--  -->, del archivo,  o  archivos dentro de la
   carpeta especificada.
 
@@ -17,7 +17,7 @@
 
     -s  Sobreescribe el archivo de entrada, como archivo de salida.
 
-    -f  Procesa todos los archivos dentro de la carpeta especifcada
+    -f  Procesa todos los archivos dentro de la carpeta especificada
         que pertenezcan a la extension dada, sobreescribiendo los
         archivos de entrada.
 
