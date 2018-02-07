@@ -28,10 +28,10 @@
 
   Ejemplos:
 
-  java -jar JUncomment.jar /d "C:\Documents\file_in.xhtml" "C:\Documents\file_out.xhtml"
+  java -jar JUncomment.jar -d "C:\Documents\file_in.xhtml" "C:\Documents\file_out.xhtml"
 
-  java -jar JUncomment.jar /s "C:\Documents\file_in.xhtml"
+  java -jar JUncomment.jar -s "C:\Documents\file_in.xhtml"
 
-  java -jar JUncomment.jar /f "C:\Folder" "java"
+  java -jar JUncomment.jar -f "C:\Folder" "java"
 
-  java -jar JUncomment.jar /r "C:\Folder" "xhtml"
+  java -jar JUncomment.jar -r "C:\Folder" "xhtml"
