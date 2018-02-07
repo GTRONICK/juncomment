@@ -70,7 +70,7 @@ public class Juncomment {
             gobJUncomment.showHelp();
             
         }else{
-            System.out.println("\nParámetros incorrectos, escriba java -jar juncomment.jar -h para ver la ayuda.");
+            System.out.println("\nParÃ¡metros incorrectos, escriba java -jar juncomment.jar -h para ver la ayuda.");
         }
     }
 
@@ -102,7 +102,7 @@ public class Juncomment {
             }
 
         } catch (FileNotFoundException ex) {
-            System.out.println("\nArchivo no encontrado, verifique el archivo de entrada es válido: \n" + ex.getMessage());
+            System.out.println("\nArchivo no encontrado, verifique el archivo de entrada es vÃ¡lido: \n" + ex.getMessage());
         } catch (IOException ex) {
             System.out.println("\nError de lectura del archivo. Verifique los permisos de lectura: \n" + ex.getMessage());
         } finally {
@@ -203,7 +203,7 @@ public class Juncomment {
     }
 
     /**
-     * Clase para manejo del filtro para la extensión del archivo.
+     * Clase para manejo del filtro para la extensiÃ³n del archivo.
      */
     public static class GenericExtFilter implements FilenameFilter {
 
@@ -273,7 +273,7 @@ public class Juncomment {
         System.out.println("                                       JUNCOMMENT 1.0                                 ");
         System.out.println("---------------------------------------------------------------------------------------");
         System.out.println("");
-        System.out.println("  Esta aplicación borra los comentarios simples y multilinea tipo Java como // y /**/,");
+        System.out.println("  Esta aplicaciÃ³n borra los comentarios simples y multilinea tipo Java como // y /**/,");
         System.out.println("  y los comentarios tipo xml  como   <!--  -->, del archivo,  o  archivos dentro de la");
         System.out.println("  carpeta especificada.");
         System.out.println("");
@@ -288,7 +288,7 @@ public class Juncomment {
         System.out.println("");
         System.out.println("    -s  Sobreescribe el archivo de entrada, como archivo de salida.  ");
         System.out.println("");
-        System.out.println("    -f  Procesa todos los archivos dentro de la carpeta especifcada  ");
+        System.out.println("    -f  Procesa todos los archivos dentro de la carpeta especificada ");
         System.out.println("        que pertenezcan a la extension dada, sobreescribiendo los    ");
         System.out.println("        archivos de entrada.");
         System.out.println("");
@@ -311,8 +311,8 @@ public class Juncomment {
     
     /**
      * Lista el contenido de un directorio recursivamente, y almacena en un
-     * arreglo global únicamente los archivos encontrados que pertenezcan a la
-     * extensión de archivo especificada.
+     * arreglo global Ãºnicamente los archivos encontrados que pertenezcan a la
+     * extensiÃ³n de archivo especificada.
      * @param asPath Ruta de la carpeta a examinar.
      * @param asExtension Extension de archivo a buscar.
      */
