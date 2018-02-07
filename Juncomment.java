@@ -299,13 +299,13 @@ public class Juncomment {
         System.out.println("");
         System.out.println("  Ejemplos:");
         System.out.println("");
-        System.out.println("  java -jar JUncomment.jar /d \"C:\\Documents\\file_in.xhtml\" \"C:\\Documents\\file_out.xhtml\"");
+        System.out.println("  java -jar JUncomment.jar -d \"C:\\Documents\\file_in.xhtml\" \"C:\\Documents\\file_out.xhtml\"");
         System.out.println("");
-        System.out.println("  java -jar JUncomment.jar /s \"C:\\Documents\\file_in.xhtml\"");
+        System.out.println("  java -jar JUncomment.jar -s \"C:\\Documents\\file_in.xhtml\"");
         System.out.println("");
-        System.out.println("  java -jar JUncomment.jar /f \"C:\\Folder\" \"java\"");
+        System.out.println("  java -jar JUncomment.jar -f \"C:\\Folder\" \"java\"");
         System.out.println("");
-        System.out.println("  java -jar JUncomment.jar /r \"C:\\Folder\" \"xhtml\"");
+        System.out.println("  java -jar JUncomment.jar -r \"C:\\Folder\" \"xhtml\"");
         System.out.println("");
     }
     
