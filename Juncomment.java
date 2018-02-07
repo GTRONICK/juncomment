@@ -273,8 +273,8 @@ public class Juncomment {
         System.out.println("                                       JUNCOMMENT 1.0                                 ");
         System.out.println("---------------------------------------------------------------------------------------");
         System.out.println("");
-        System.out.println("  Esta aplicación borra los comentarios simples y multilinea tipo Java como // y /**/,");
-        System.out.println("  y los comentarios tipo xml  como   <!--  -->, del archivo,  o  archivos dentro de la");
+        System.out.println("  Esta aplicación borra los comentarios simples y multilinea tipo   C   como // y /**/,");
+        System.out.println("  y los comentarios tipo xml  como   <!--  -->, del archivo,  o  archivos dentro de la ");
         System.out.println("  carpeta especificada.");
         System.out.println("");
         System.out.println("----------------------------------------Modo de uso------------------------------------");
