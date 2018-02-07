@@ -1,0 +1,37 @@
+---------------------------------------------------------------------------------------
+                                       JUNCOMMENT 1.0
+---------------------------------------------------------------------------------------
+
+  Esta aplicación borra los comentarios simples y multilinea tipo Java como // y /**/,
+  y los comentarios tipo xml  como   <!--  -->, del archivo,  o  archivos dentro de la
+  carpeta especificada.
+
+----------------------------------------Modo de uso------------------------------------
+
+  java -jar juncomment.jar OPCION [[archivo_entrada]/carpeta][archivo_salida/extension]
+
+  Opciones:
+
+    -d  Elimina los comentarios del archivo de entrada, y genera un
+        archivo de salida.
+
+    -s  Sobreescribe el archivo de entrada, como archivo de salida.
+
+    -f  Procesa todos los archivos dentro de la carpeta especifcada
+        que pertenezcan a la extension dada, sobreescribiendo los
+        archivos de entrada.
+
+    -r  Procesa todos los archivos detro de la carpeta especificada
+        de manera recursiva, es decir, procesa la carpeta actual y
+        las subcarpetas, sobreescribiendo los archivos cuya extension
+        sea la especificada.
+
+  Ejemplos:
+
+  java -jar JUncomment.jar /d "C:\Documents\file_in.xhtml" "C:\Documents\file_out.xhtml"
+
+  java -jar JUncomment.jar /s "C:\Documents\file_in.xhtml"
+
+  java -jar JUncomment.jar /f "C:\Folder" "java"
+
+  java -jar JUncomment.jar /r "C:\Folder" "xhtml"
