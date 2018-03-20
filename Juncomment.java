@@ -39,18 +39,18 @@ public class Juncomment {
         Juncomment gobJUncomment = new Juncomment();
         ArrayList<String> lobArrayList;
         
-        if(args.length == 3 && args[0].equals("-d")){
+        if(args.length == 2 && args[0].equals("-d")){
             System.out.println("Deleting comments ...");
             gobJUncomment.processFile(args[1], args[2]);
             
-        } else if(args.length == 3 && args[0].equals("-f")) {   
+        } else if(args.length == 2 && args[0].equals("-f")) {   
             System.out.println("Deleting comments ...");
             lobArrayList = gobJUncomment.listFiles(args[1], args[2]);
             for(String lsListElement:lobArrayList){
                 gobJUncomment.processFile(lsListElement, lsListElement);
             }
             
-        } else if(args.length == 3 && args[0].equals("-r")) {
+        } else if(args.length == 2 && args[0].equals("-r")) {
             System.out.println("Deleting comments ...");
             gobJUncomment.recursiveListDirectory(args[1], args[2]);
             int liSize = gobFileList.size();
@@ -61,7 +61,7 @@ public class Juncomment {
             }
             System.out.println("Done");
             
-        } else if(args.length == 3 && args[0].equals("-s")) {
+        } else if(args.length == 2 && args[0].equals("-s")) {
             System.out.println("Deleting comments ...");
             gobJUncomment.processFile(args[1], args[1]);
             
