@@ -1,8 +1,8 @@
 /*JUNCOMMENT 1.1
 CREATED:   07/02/2018
 LAST EDIT: 20/03/2018
-Alexander Carvajal 	[alexander.carvajal.lopez@gmail.com]
 Jaime Quiroga		[gtronick@gmail.com]
+Alexander Carvajal 	[alexander.carvajal.lopez@gmail.com]
 
 */
 import java.io.BufferedReader;
