@@ -41,18 +41,18 @@ public class Juncomment {
         ArrayList<String> lobArrayList;
         
         if(args.length == 3 && args[0].equals("-d")){
-            System.out.println("Deleting comments ...");
+            System.out.println("Processing input file, and generating output file...");
             gobJUncomment.processFile(args[1], args[2]);
             
         } else if(args.length == 3 && args[0].equals("-f")) {   
-            System.out.println("Deleting comments ...");
+            System.out.println("Processing files in folder...");
             lobArrayList = gobJUncomment.listFiles(args[1], args[2]);
             for(String lsListElement:lobArrayList){
                 gobJUncomment.processFile(lsListElement, lsListElement);
             }
             
         } else if(args.length == 3 && args[0].equals("-r")) {
-            System.out.println("Deleting comments ...");
+            System.out.println("Processing files recursively...");
             gobJUncomment.recursiveListDirectory(args[1], args[2]);
             int liSize = gobFileList.size();
             String lsItem;
@@ -63,15 +63,14 @@ public class Juncomment {
             System.out.println("Done");
             
         } else if(args.length == 2 && args[0].equals("-s")) {
-            System.out.println("Deleting comments ...");
+            System.out.println("Processing file ...");
             gobJUncomment.processFile(args[1], args[1]);
             
         }else if((args.length == 1 && args[0].equals("-h"))){
-            System.out.println("Showing help ...");
             gobJUncomment.showHelp();
             
         }else{
-            System.out.println("\nParámetros incorrectos, escriba java -jar juncomment.jar -h para ver la ayuda.");
+            System.out.println("\nWrong parameters, use java -jar juncomment.jar -h to show the help.");
         }
     }
 
@@ -103,14 +102,14 @@ public class Juncomment {
             }
 
         } catch (FileNotFoundException ex) {
-            System.out.println("\nArchivo no encontrado, verifique el archivo de entrada es válido: \n" + ex.getMessage());
+            System.out.println("\nFile Not Found!, check the path: \n" + ex.getMessage());
         } catch (IOException ex) {
-            System.out.println("\nError de lectura del archivo. Verifique los permisos de lectura: \n" + ex.getMessage());
+            System.out.println("\nCan't read file. Check file permissions: \n" + ex.getMessage());
         } finally {
             try {
                 if(lobReader != null) lobReader.close();
             } catch (IOException | NullPointerException ex) {
-                System.out.println("\n\nArchivo no encontrado, o permisos de lectura restringidos");
+                System.out.println("\n\nFile not found, or access denied.");
             }
         }
        
@@ -231,7 +230,7 @@ public class Juncomment {
     
     /**
      * Procesa un archivo, eliminando los comentarios encontrados y generando un
-     * archivo de salida cuando se usa el paramentro /d. De lo contrario, se
+     * archivo de salida cuando se usa el paramentro -d. De lo contrario, se
      * sobreescribe el archivo de entrada.
      * @param asInputFile Archivo de entrada.
      * @param asOutputFile Archivo de salida.
@@ -263,51 +262,45 @@ public class Juncomment {
     }
     
     /**
-     * Muestra la ayuda de la aplicacion, cuando se usa el parametro /h, o cuando
+     * Muestra la ayuda de la aplicacion, cuando se usa el parametro -h, o cuando
      * se introducen parametros incorrectos.
      */
     private void showHelp(){
         
         System.out.println("");
         System.out.println("");
-        System.out.println("---------------------------------------------------------------------------------------");
-        System.out.println("                                       JUNCOMMENT 1.0                                 ");
-        System.out.println("---------------------------------------------------------------------------------------");
-        System.out.println("");
-        System.out.println("  Esta aplicación borra los comentarios simples y multilinea tipo   C   como // y /**/,");
-        System.out.println("  y los comentarios tipo xml  como   <!--  -->, del archivo,  o  archivos dentro de la ");
-        System.out.println("  carpeta especificada.");
-        System.out.println("");
-        System.out.println("----------------------------------------Modo de uso------------------------------------");
-        System.out.println("");
-        System.out.println("  java -jar juncomment.jar OPCION [[archivo_entrada]/carpeta][archivo_salida/extension]");
-        System.out.println("");
-        System.out.println("  Opciones:");
-        System.out.println("");
-        System.out.println("    -d  Elimina los comentarios del archivo de entrada, y genera un  ");
-        System.out.println("        archivo de salida.");
-        System.out.println("");
-        System.out.println("    -s  Sobreescribe el archivo de entrada, como archivo de salida.  ");
-        System.out.println("");
-        System.out.println("    -f  Procesa todos los archivos dentro de la carpeta especificada ");
-        System.out.println("        que pertenezcan a la extension dada, sobreescribiendo los    ");
-        System.out.println("        archivos de entrada.");
-        System.out.println("");
-        System.out.println("    -r  Procesa todos los archivos detro de la carpeta especificada");
-        System.out.println("        de manera recursiva, es decir, procesa la carpeta actual y ");
-        System.out.println("        las subcarpetas, sobreescribiendo los archivos cuya extension");
-        System.out.println("        sea la especificada.");
-        System.out.println("");
-        System.out.println("  Ejemplos:");
-        System.out.println("");
-        System.out.println("  java -jar JUncomment.jar -d \"C:\\Documents\\file_in.xhtml\" \"C:\\Documents\\file_out.xhtml\"");
-        System.out.println("");
-        System.out.println("  java -jar JUncomment.jar -s \"C:\\Documents\\file_in.xhtml\"");
-        System.out.println("");
-        System.out.println("  java -jar JUncomment.jar -f \"C:\\Folder\" \"java\"");
-        System.out.println("");
-        System.out.println("  java -jar JUncomment.jar -r \"C:\\Folder\" \"xhtml\"");
-        System.out.println("");
+        System.out.println("------------------------------------------------------------------------------------------------");
+        System.out.println("                                           JUNCOMMENT 1.1                                       ");
+        System.out.println("------------------------------------------------------------------------------------------------");
+        System.out.println("                                                                                                ");
+        System.out.println("  This application deletes C comments like // and /**/, and xml comments like <!--  --> in the  ");
+        System.out.println("  file, or  files inside the specified folder.                                                  ");
+        System.out.println("                                                                                                ");
+        System.out.println("------------------------------------------------------------------------------------------------");
+        System.out.println("                                                                                                ");
+        System.out.println("  USAGE: java -jar juncomment.jar [OPTION] INPUT_FILE_OR_FOLDER [OUTPUT_FILE_OR_EXTENSION]      ");
+        System.out.println("                                                                                                ");
+        System.out.println("  OPTIONS:                                                                                      ");
+        System.out.println("                                                                                                ");
+        System.out.println("    -d  (duplicate) Deletes the comments in the input file and generates an output file         ");
+        System.out.println("                                                                                                ");
+        System.out.println("    -s  (self) Deletes the comments in the input file and overwrites it.                        ");
+        System.out.println("                                                                                                ");
+        System.out.println("    -f  (folder) Like -s, but for all the files inside the specified folder that match          ");
+        System.out.println("        the especified extension.                                                               ");
+        System.out.println("                                                                                                ");
+        System.out.println("    -r  (recursive) Like -f, but also for subfolders in a recursive fashion.                    ");
+        System.out.println("                                                                                                ");
+        System.out.println("  Examples:                                                                                     ");
+        System.out.println("                                                                                                ");
+        System.out.println("  java -jar juncomment.jar -d \"C:\\Documents\\file_in.xhtml\" \"C:\\Documents\\file_out.xhtml\"");
+        System.out.println("                                                                                                ");
+        System.out.println("  java -jar juncomment.jar -s \"C:\\Documents\\file_in.xhtml\"                                  ");
+        System.out.println("                                                                                                ");
+        System.out.println("  java -jar juncomment.jar -f \"C:\\Folder\" \"java\"                                           ");
+        System.out.println("                                                                                                ");
+        System.out.println("  java -jar juncomment.jar -r \"C:\\Folder\" \"xhtml\"                                          ");
+        System.out.println("                                                                                                ");
     }
     
     /**
@@ -324,18 +317,18 @@ public class Juncomment {
         
         if( lobPath.exists() ) {
             File[] files = lobPath.listFiles();
-             for (File file : files) {
+            for (File file : files) {
                  
-                 if (file.isDirectory()) {
-                     lobTempList = listFiles(file.getAbsolutePath(), asExtension);
-                     for(String lsListItem:lobTempList){
-                         gobFileList.add(lsListItem);
-                     }
-                     recursiveListDirectory(file.getAbsolutePath(),asExtension);
-                 } else {
-                     gobFileList.add(file.getAbsolutePath());
-                 }
-             }
+                if (file.isDirectory()) {
+                    lobTempList = listFiles(file.getAbsolutePath(), asExtension);
+                    for(String lsListItem:lobTempList){
+                        gobFileList.add(lsListItem);
+                    }
+                    recursiveListDirectory(file.getAbsolutePath(),asExtension);
+                } else {
+                    gobFileList.add(file.getAbsolutePath());
+                }
+            }
         }
     }
 }
