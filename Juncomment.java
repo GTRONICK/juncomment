@@ -332,6 +332,8 @@ public class Juncomment {
                          gobFileList.add(lsListItem);
                      }
                      recursiveListDirectory(file.getAbsolutePath(),asExtension);
+                 } else {
+                     gobFileList.add(file.getAbsolutePath());
                  }
              }
         }
