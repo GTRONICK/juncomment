@@ -1,5 +1,6 @@
-/*JUNCOMMENT 1.0 
-07/02/2018
+/*JUNCOMMENT 1.1
+CREATED:   07/02/2018
+LAST EDIT: 20/03/2018
 Alexander Carvajal 	[alexander.carvajal.lopez@gmail.com]
 Jaime Quiroga		[gtronick@gmail.com]
 
