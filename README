@@ -11,7 +11,7 @@
 
   OPTIONS:
 
-    -d  (duplicate) Deletes the comments in the input file and generates an output file
+    -d  (duplicate) Deletes the comments in the input file and generates an output file.
 
     -s  (self) Deletes the comments in the input file and overwrites it.
 
